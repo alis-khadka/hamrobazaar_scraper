@@ -1,24 +1,28 @@
-# README
+## Hamro Bazar Scraper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Technology stack
 
-Things you may want to cover:
+- Rails 6.0.3.4
+- Ruby 2.6.5
+- PostgreSQL
+- Angular cli 11.0.2
+- node v10.19.0
 
-* Ruby version
+### Local development setup
 
-* System dependencies
+```
+git clone https://github.com/alis-khadka/hamrobazaar_scraper.git
+cd hamrobazaar_scraper
+bundle install
+rails db:create
+rails db:migrate db:seed
+cd client
+npm install
+```
 
-* Configuration
+##### Running frontend, backend 
 
-* Database creation
+- Frontend (from client folder): `ng serve`
+- API: `rails s`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Go to URL: http://localhost:4200
