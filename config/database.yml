@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: hamrobazaar_scraper_production
+  username: hamrobazaar_scraper
+  password: <%= ENV['HAMROBAZAAR_SCRAPER_DATABASE_PASSWORD'] %>
