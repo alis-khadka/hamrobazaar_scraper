@@ -7,7 +7,6 @@ require 'pry'
 class ScrapingService
   def initialize(hamrobazaar_url)
     @url = hamrobazaar_url
-    @now = Time.now
   end
 
   def call
@@ -29,7 +28,7 @@ class ScrapingService
       description: html_body.at('//b[contains(text(), "Description")]/../../../../../../..').children[1].text.strip,
       price: html_body.at('//td[contains(text(), "Price:")]/..').children.last.text,
       mobile_number: html_body.at('//td[contains(text(), "Mobile Phone:")]/..').children.last.children.first.text.strip,
-      refetch_after: @now + 1.weeks
+      refetch_after: Time.now + 1.weeks
     }
   end
 
