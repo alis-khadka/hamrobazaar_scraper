@@ -4,7 +4,7 @@
 
 - Rails 6.0.3.4
 - Ruby 2.6.5
-- PostgreSQL
+- SQlite
 - Angular cli 11.0.2
 - node v10.19.0
 
