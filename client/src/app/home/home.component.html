@@ -1,0 +1,35 @@
+<div class="search-container">
+  <input class="search-bar" placeholder="Enter hamrobazaar url here." (ngModelChange)="up($event)" [(ngModel)]="text"
+    (keyup.enter)="searchProduct(text)">
+</div>
+
+<div class="table-container">
+  <div class="w-100" *ngIf="data">
+    <h2>Product Details from Hamrobazaar.com</h2>
+    <table>
+      <tr>
+        <td>Title</td>
+        <td>{{data.title}}</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{data.description}}</td>
+      </tr>
+      <tr>
+        <td>Mobile number</td>
+        <td>{{data.mobile_number}}</td>
+      </tr><tr>
+        <td>Price</td>
+        <td>{{data.price}}</td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>{{data.url}}</td>
+      </tr>
+
+    </table>
+  </div>
+  <div *ngIf="error">
+    <h2 class="text-danger">Error message: {{error}}</h2>
+  </div>
+</div>
