@@ -1,4 +1,4 @@
-## Hamro Bazar Scraper
+## HamroBazaar Scraper
 
 ### Technology stack
 
