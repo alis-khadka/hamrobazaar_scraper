@@ -18,7 +18,7 @@ export class HomeComponent {
   flag = true
   text = '';
   data: any;
-  error = '';
+  error: any;
   _destroyed$: Subject<boolean> = new Subject<boolean>();
   _sellerSearchSub$: Subject<string> = new Subject<string>();
 
@@ -62,7 +62,6 @@ export class HomeComponent {
             this.data = '';
             this.error = res.error;
           }
-          console.log(data);
         });
     }
   }
